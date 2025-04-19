@@ -1,0 +1,14 @@
+#root {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
