@@ -3,6 +3,7 @@ import { MapPin, Smartphone, CalendarCheck } from "lucide-react";
 import React, { useState } from "react";
 import Logo from "./assets/ActLocal-text.svg";
 import Contactus from "./components/Contactus.jsx";
+import ScreenshotsShowcase from "./components/ScreenshotsShowcase.jsx";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -205,7 +206,9 @@ export default function ActLocalPromo() {
             </ul>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
+          <ScreenshotsShowcase />
+
+          <div className="grid grid-cols-1  md:grid-cols-3 gap-10 mb-24">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
