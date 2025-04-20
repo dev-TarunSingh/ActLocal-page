@@ -26,13 +26,13 @@ const features = [
   },
   {
     icon: <Smartphone className="text-secondary mb-4" size={40} />,
-    title: "Instant Booking",
+    title: "Instant Booking *",
     description:
       "Book appointments with just a few taps — fast, easy, and convenient.",
   },
   {
     icon: <CalendarCheck className="text-accent mb-4" size={40} />,
-    title: "Reliable Service Profiles",
+    title: "Reliable Service Profiles *",
     description:
       "View provider ratings, availability, and past work to make informed choices.",
   },
@@ -328,6 +328,17 @@ export default function ActLocalPromo() {
                 {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               </button>
             </div>
+            <p className="text-gray-600 dark:text-gray-400">
+              This app is currently in the testing phase. You may encounter
+              minor issues or glitches, and some features are still under
+              development.
+            </p>
+            <p className="text-gray-600 dark:text-gray-400">
+              Please note: Profile security measures are still being improved.
+              Users are free to post any service that is legal under Indian law.
+              We do not promote or support any illegal activities, and ActLocal
+              is not responsible for user-generated content or services.
+            </p>
             <p className="text-gray-600 dark:text-gray-400">
               © 2025 ActLocal. All rights reserved.
             </p>
