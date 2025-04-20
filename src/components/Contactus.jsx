@@ -30,8 +30,7 @@ export default function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  console.log(import.meta.env.VITE_SERVICEID, import.meta.env.VITE_TEMPLATEID);
-
+  
   const sendEmail = (e) => {
     e.preventDefault();
     setSending(true);
