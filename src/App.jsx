@@ -118,22 +118,15 @@ function Header() {
 
 export default function ActLocalPromo() {
   const [darkMode, setDarkMode] = useState(false);
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle("dark", !darkMode);
-  };
-
-  const handleFormChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted:", formData);
-    alert("Message sent! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -142,13 +135,74 @@ export default function ActLocalPromo() {
         <main className="max-w-screen-xl mx-auto px-4 md:px-6 pt-24 pb-10 font-sans">
           <Header />
 
-          <motion.div initial="hidden" animate="visible" variants={fadeInUp} custom={1}>
+          <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInUp}
+            custom={1}
+          >
             <h1 className="text-4xl md:text-6xl font-extrabold text-center mb-4 tracking-tight">
               ActLocal <br /> Empowering Local Services
             </h1>
             <p className="text-center text-xl mb-12 max-w-3xl mx-auto">
-              Discover, book, and connect with trusted local professionals. We bring services to your fingertips.
+              Discover, book, and connect with trusted local professionals. We
+              bring services to your fingertips.
             </p>
+          </motion.div>
+
+          <motion.div
+            className="text-center mb-24"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            custom={6}
+          >
+            <h2 className="text-4xl font-bold mb-6">Why ActLocal?</h2>
+            <p className="text-lg max-w-4xl mx-auto mb-8 text-gray-700 dark:text-gray-300">
+              ActLocal is more than just a service marketplace—it's a
+              mission-driven platform built to empower **local service
+              providers**, increase their **digital visibility**, and make
+              **trusted services** more accessible for users like you.
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-6 text-left max-w-5xl mx-auto">
+              <li className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+                <strong className="block text-lg font-semibold mb-2 text-primary">
+                  Empowering Informal Workers
+                </strong>
+                <p>
+                  Whether it's a plumber, tutor, or cook—ActLocal helps them
+                  gain digital recognition and reach customers nearby.
+                </p>
+              </li>
+              <li className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+                <strong className="block text-lg font-semibold mb-2 text-primary">
+                  Hyperlocal, Personalized
+                </strong>
+                <p>
+                  With geolocation-based listings, you're always shown the most
+                  relevant providers, saving both time and effort.
+                </p>
+              </li>
+              <li className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+                <strong className="block text-lg font-semibold mb-2 text-primary">
+                  Verified Badges & Profiles
+                </strong>
+                <p>
+                  We ensure that you connect with reliable professionals through
+                  verified profiles and transparent ratings.
+                </p>
+              </li>
+              <li className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+                <strong className="block text-lg font-semibold mb-2 text-primary">
+                  Real-time Chat & Instant Booking
+                </strong>
+                <p>
+                  Communicate and confirm services instantly—skip the hassle of
+                  long calls or waiting hours.
+                </p>
+              </li>
+            </ul>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
@@ -163,59 +217,120 @@ export default function ActLocalPromo() {
                 className="shadow-xl hover:shadow-2xl transition-shadow duration-300 rounded-3xl bg-white dark:bg-gray-800 p-8 flex flex-col items-center text-center"
               >
                 {feature.icon}
-                <h2 className="text-2xl dark:text-white font-bold mb-3">{feature.title}</h2>
-                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">{feature.description}</p>
+                <h2 className="text-2xl dark:text-white font-bold mb-3">
+                  {feature.title}
+                </h2>
+                <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
 
-          <motion.div className="text-center mb-24" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={4}>
+          <motion.div
+            className="text-center mb-24"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            custom={4}
+          >
             <h2 className="text-3xl font-semibold mb-4">Meet Our Team</h2>
             <div className="flex flex-col md:flex-row justify-center gap-8">
               {team.map((member, index) => (
-                <div key={index} className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full md:w-80">
-                  <h3 className="text-xl font-bold mb-1 dark:text-white">{member.name}</h3>
-                  <p className="font-medium text-gray-500 dark:text-gray-400 mb-2">{member.role}</p>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">{member.description}</p>
+                <div
+                  key={index}
+                  className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg w-full md:w-80"
+                >
+                  <h3 className="text-xl font-bold mb-1 dark:text-white">
+                    {member.name}
+                  </h3>
+                  <p className="font-medium text-gray-500 dark:text-gray-400 mb-2">
+                    {member.role}
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    {member.description}
+                  </p>
                 </div>
               ))}
             </div>
           </motion.div>
 
-          <motion.div className="text-center mb-24" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={5}>
+          <motion.div
+            className="text-center mb-24"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            custom={5}
+          >
             <h2 className="text-3xl font-semibold mb-4">Live Listings</h2>
             <div className="relative overflow-hidden">
-              <div className="flex animate-scroll-x space-x-6 px-2 py-4 snap-x snap-mandatory scrollbar-hide" style={{ minWidth: "max-content" }}>
+              <div
+                className="flex animate-scroll-x space-x-6 px-2 py-4 snap-x snap-mandatory scrollbar-hide"
+                style={{ minWidth: "max-content" }}
+              >
                 {[...services, ...services].map((service, index) => (
-                  <div key={index} className="snap-center flex-shrink-0 bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 w-80">
-                    <h3 className="text-xl font-bold mb-2 dark:text-white">{service.title}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{service.description}</p>
-                    <p className="font-semibold text-blue-600 mb-1">{service.price}</p>
-                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">{service.user}</p>
+                  <div
+                    key={index}
+                    className="snap-center flex-shrink-0 bg-white dark:bg-gray-800 rounded-2xl shadow-md p-6 w-80"
+                  >
+                    <h3 className="text-xl font-bold mb-2 dark:text-white">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
+                      {service.description}
+                    </p>
+                    <p className="font-semibold text-blue-600 mb-1">
+                      {service.price}
+                    </p>
+                    <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
+                      {service.user}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
           </motion.div>
 
-          <motion.div id="download" className="bg-white dark:bg-gray-800 mt-24 rounded-3xl p-10 shadow-xl text-center" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp} custom={6}>
-            <h2 className="text-4xl text-black dark:text-white font-bold mb-6">Download the ActLocal App</h2>
+          <motion.div
+            id="download"
+            className="bg-white dark:bg-gray-800 mt-24 rounded-3xl p-10 shadow-xl text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+            custom={6}
+          >
+            <h2 className="text-4xl text-black dark:text-white font-bold mb-6">
+              Download the ActLocal App
+            </h2>
             <p className="text-lg dark:text-gray-300 mb-10 max-w-3xl mx-auto">
-              Experience ActLocal on the go. Connect with service providers, book instantly, and manage tasks with ease.
+              Experience ActLocal on the go. Connect with service providers,
+              book instantly, and manage tasks with ease.
             </p>
             <a href="/ActlocalBuild10.apk" download>
-              <img src={Logo} alt="App Mockup" className="mx-auto rounded-xl shadow-2xl h-40" />
+              <img
+                src={Logo}
+                alt="App Mockup"
+                className="mx-auto rounded-xl shadow-2xl h-40"
+              />
             </a>
           </motion.div>
 
           <Contactus />
           <footer className="mt-24 py-8 border-t border-gray-300 dark:border-gray-700 text-center">
             <div className="mb-4">
-              <button onClick={toggleDarkMode} className="px-4 py-2 bg-primary text-white rounded-full">
+              <button
+                onClick={toggleDarkMode}
+                className="px-4 py-2 bg-primary text-white rounded-full"
+              >
                 {darkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
               </button>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">© 2025 ActLocal. All rights reserved.</p>
+            <p className="text-gray-600 dark:text-gray-400">
+              © 2025 ActLocal. All rights reserved.
+            </p>
           </footer>
         </main>
       </div>
