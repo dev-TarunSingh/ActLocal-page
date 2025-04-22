@@ -53,6 +53,8 @@ const team = [
   },
 ];
 
+const ApkLink = "https://drive.google.com/file/d/13baWnFClgPFRP-4yazZxfgo1cZ2DMqtm/view?usp=drive_link";
+
 const services = [
   {
     title: "Scooty Ride to Anywhere in Tricity",
@@ -106,7 +108,7 @@ function Header() {
           <img src={Logo} alt="ActLocal Logo" className="h-24 object-contain" />
         </a>
         <a
-          href="/ActlocalBuild10.apk"
+          href= {ApkLink}
           download
           className="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium shadow hover:bg-blue-700 transition"
         >
@@ -312,7 +314,7 @@ export default function ActLocalPromo() {
               Experience ActLocal on the go. Connect with service providers,
               book instantly, and manage tasks with ease.
             </p>
-            <a href="/ActlocalBuild10.apk" download>
+            <a href={ApkLink} download>
               <img
                 src={Logo}
                 alt="App Mockup"
