@@ -53,7 +53,7 @@ const team = [
   },
 ];
 
-const ApkLink = "https://drive.google.com/file/d/13baWnFClgPFRP-4yazZxfgo1cZ2DMqtm/view?usp=drive_link";
+const ApkLink = "https://drive.google.com/uc?export=download&id=1_6dMWGFMNQ-TCy3mV1CBU2Oz03cp6S04";
 
 const services = [
   {
