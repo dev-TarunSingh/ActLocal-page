@@ -54,7 +54,8 @@ const team = [
   },
 ];
 
-const ApkLink = "https://drive.google.com/uc?export=download&id=1_6dMWGFMNQ-TCy3mV1CBU2Oz03cp6S04";
+const ApkLink =
+  "https://drive.google.com/uc?export=download&id=1_6dMWGFMNQ-TCy3mV1CBU2Oz03cp6S04";
 
 const services = [
   {
@@ -109,7 +110,7 @@ function Header() {
           <img src={Logo} alt="ActLocal Logo" className="h-24 object-contain" />
         </a>
         <a
-          href= {ApkLink}
+          href={ApkLink}
           download
           className="bg-primary text-white px-5 py-2 rounded-full text-sm font-medium shadow hover:bg-blue-700 transition"
         >
@@ -121,7 +122,6 @@ function Header() {
 }
 
 export default function Main() {
-
   const [darkMode, setDarkMode] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -352,11 +352,11 @@ export default function Main() {
               © 2025 ActLocal. All rights reserved.
             </p>
             <button
-            onClick={() => navigate("/terms")}
-                className="px-4 py-2 bg-primary text-white rounded-full"
-              >
-                View Terms, Conditions and Privacy Policy.
-              </button>
+              onClick={() => navigate("/terms", { replace: true })}
+              className="px-4 py-2 bg-primary text-white rounded-full"
+            >
+              View Terms, Conditions and Privacy Policy.
+            </button>
           </footer>
         </main>
       </div>
