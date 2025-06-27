@@ -352,7 +352,7 @@ export default function Main() {
               © 2025 ActLocal. All rights reserved.
             </p>
             <button
-            onClick={() => window.location.href = "/terms-policy"}
+            onClick={() => window.location.href = "/terms"}
                 className="px-4 py-2 bg-primary text-white rounded-full"
               >
                 View Terms, Conditions and Privacy Policy.
