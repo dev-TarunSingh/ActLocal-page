@@ -54,8 +54,7 @@ const team = [
   },
 ];
 
-const ApkLink =
-  "https://drive.google.com/uc?export=download&id=1_6dMWGFMNQ-TCy3mV1CBU2Oz03cp6S04";
+const ApkLink = "https://indusapp.store/zb6przlu";
 
 const services = [
   {
@@ -318,13 +317,31 @@ export default function Main() {
               Experience ActLocal on the go. Connect with service providers,
               book instantly, and manage tasks with ease.
             </p>
-            <a href={ApkLink} download>
-              <img
-                src={Logo}
-                alt="App Mockup"
-                className="mx-auto rounded-xl shadow-2xl h-40"
-              />
-            </a>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 py-4">
+              <a
+                href={ApkLink}
+                className="rounded-xl shadow-2xl"
+                style={{ margin: "8px" }}
+              >
+                <img
+                  alt="Get it on Indus Appstore"
+                  src="https://docstore.indusappstore.com/public/external/developerdashboard-static/badge-black-background-english.png"
+                  className="h-20 w-auto"
+                />
+              </a>
+              <a
+                href={ApkLink}
+                download
+                className=""
+                style={{ padding: "8px" }}
+              >
+                <img
+                  src={Logo}
+                  alt="App Mockup"
+                  className="rounded-xl shadow-2xl h-40"
+                />
+              </a>
+            </div>
           </motion.div>
 
           <Contactus />
