@@ -1,9 +1,11 @@
 import React from "react";
 import chat from "../assets/screenshots/Chat-SS.jpg";
 import homeScreen from "../assets/screenshots/HomeScreen-SS.jpg";
-import post from "../assets/screenshots/Post-SS.jpeg";
-import postdetails from "../assets/screenshots/PostDetails-SS.jpeg";
+import post from "../assets/screenshots/Post-SS.jpg";
+import postdetails from "../assets/screenshots/PostDetails-SS.jpg";
 import signup from "../assets/screenshots/Signup-SS.jpg";
+import profile from "../assets/screenshots/Profile-SS.jpg";
+import chatroom from "../assets/screenshots/Chatroom-SS.jpg";
 import { motion } from "framer-motion";
 import { Helmet } from "react-helmet";
 
@@ -41,6 +43,20 @@ const screenshots = [
     description:
       "Easily create and manage your listings with our user-friendly interface.",
     image: post,
+  },
+  {
+    section: "Feature",
+    title: "Chat with Service Providers",
+    description:
+      "Communicate directly with service providers to discuss details and book services.",
+    image: chatroom,
+  },
+  {
+    section: "Feature",
+    title: "Profile Management",
+    description:
+      "Manage your profile and listings effortlessly with our intuitive interface.",
+    image: profile,
   },
 ];
 
