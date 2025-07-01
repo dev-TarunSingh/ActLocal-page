@@ -54,7 +54,7 @@ const team = [
   },
 ];
 
-const ApkLink = "https://indusapp.store/zb6przlu";
+const ApkLink = "https://www.indusappstore.com/apps/lifestyle/actlocal/com.devtarunsingh.ActLocal/?page=details&id=com.devtarunsingh.ActLocal";
 
 const services = [
   {
